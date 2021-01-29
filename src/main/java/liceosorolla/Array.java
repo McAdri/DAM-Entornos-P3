@@ -17,9 +17,26 @@ public class Array {
 		return mediana;
 		
 	}
+	private static int mayor(int[]array) {
+		int mayor=0;
+	
+		for(int i=0;i<array.length;i++){
+			
+			if(array[i]>mayor) {
+				mayor=array[i];
+			
+			}
+		
+		}
+	
+		
+		return mayor;
+		
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		int numero = 0;
 		System.out.println("Hola");
 		
@@ -28,13 +45,17 @@ public class Array {
 		numero = teclado1.nextInt();
 		
 		int[] array = new int[numero];
+		
 		for(int i = 0; i<array.length;i++) {
 			System.out.println("Introduce el siguiente numero: ");
 			array[i]=teclado1.nextInt();
 			
 	}
+
 		
+		System.out.println("El numero mayor es : "+ mayor(array));
 		mediana(array);
+		
 	
 	}
 
