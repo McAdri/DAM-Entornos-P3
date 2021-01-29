@@ -33,7 +33,19 @@ public class Array {
 		return mayor;
 		
 	}
+	
+	private static int media(int[]array) {
 
+		int total=0;
+		
+		for(int i=0;i<array.length;i++) {
+			total = array[i]+total;
+			}
+			
+		System.out.println("La nota media es: " + total/array.length);
+		
+		return total;
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -55,6 +67,7 @@ public class Array {
 		
 		System.out.println("El numero mayor es : "+ mayor(array));
 		mediana(array);
+		media(array);
 		
 	
 	}
