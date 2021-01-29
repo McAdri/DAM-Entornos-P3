@@ -1,5 +1,6 @@
 package main.java.liceosorolla;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Array {
@@ -33,6 +34,19 @@ public class Array {
 		return mayor;
 		
 	}
+	private static int menor(int[]array) {
+		int menor=50000;
+
+		for(int i=0;i<array.length;i++){
+			
+			if(array[i]<menor) {
+			menor=array[i];
+			}
+		}
+
+		
+		return menor;
+	}
 	
 	private static int media(int[]array) {
 
@@ -46,6 +60,7 @@ public class Array {
 		
 		return total;
 	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -58,16 +73,26 @@ public class Array {
 		
 		int[] array = new int[numero];
 		
+		
+		
 		for(int i = 0; i<array.length;i++) {
 			System.out.println("Introduce el siguiente numero: ");
 			array[i]=teclado1.nextInt();
 			
 	}
-
-		
 		System.out.println("El numero mayor es : "+ mayor(array));
+		System.out.println("El numero menor es: "+ menor(array));
 		mediana(array);
 		media(array);
+		
+		Arrays.sort(array);
+		System.out.println( "Ordenados es:" );
+		for (int i = 0; i<array.length; i++) {
+			
+			System.out.print(array[i]+" ");
+		}	
+
+		
 		
 	
 	}
